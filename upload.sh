@@ -1,7 +1,7 @@
 #!/usr/local/bin/fish
 
 set local_filename $argv[1]
-set icon (dirname (status --current-filename))/icon.png
+set icon (dirname (status --current-filename))/icon.icns
 
 if test -f $local_filename
   set upload_filename (echo (date +"%s")-(basename $local_filename) | perl -pe 's/[[:blank:]]+/-/g')
