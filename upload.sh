@@ -9,7 +9,7 @@ if test -f $local_filename
   set url "https://czm.io/u/$upload_filename"
 
   echo $url | pbcopy
-  rsync --protect-args --no-perms --no-owner --no-group --chmod=0644 "$local_filename" "jiffybox:sites/czm.io-uploads/$upload_filename"; and \
+  rsync --protect-args --no-perms --no-owner --no-group --chmod=0644 "$local_filename" "pubcast:sites/czm.io-uploads/$upload_filename"; and \
     /usr/local/bin/terminal-notifier -title "File finished uploading" -message "$url" -appIcon $icon -open "$url"; or \
     /usr/local/bin/terminal-notifier -title "File couldn't be uploaded" -message "$local_filename" -appIcon $icon
 end
